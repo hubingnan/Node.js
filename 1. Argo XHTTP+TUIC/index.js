@@ -5,13 +5,13 @@
 // ========= Sing-box TUIC + Argo Xray (xHTTP h2) 固定隧道 变量设置 =========
 
 
-const TUIC_PORT = process.env.TUIC_PORT || "";                                        // TUIC 直连端口（留空=不部署）
+const TUIC_PORT = process.env.TUIC_PORT || "20164";                                        // TUIC 直连端口（留空=不部署）
 
 const ARGO_PORT = process.env.ARGO_PORT || "8001";                                    // 固定隧道回源端口（与服务URL端口一致 http://127.0.0.1:8001）
 
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || "";                                    // 固定隧道域名（必须与 PORT/AUTH 同时具备才部署）
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || "katabump.huhansan.kdns.fr";                                    // 固定隧道域名（必须与 PORT/AUTH 同时具备才部署）
 
-const ARGO_AUTH = process.env.ARGO_AUTH || "";                                        // 固定隧道 Token（必须与 PORT/DOMAIN 同时具备才部署）
+const ARGO_AUTH = process.env.ARGO_AUTH || "eyJhIjoiMjU2OGZkMTFhMzE3ZDI5MmM2YjUxNDljZDIxNDY4ZGQiLCJ0IjoiNDk5MjBlMTgtZTMwYy00MDFjLWE4ZjktZjAzMjNhODgzYWQwIiwicyI6IllURTVZMk00WTJRdFpUWTNOQzAwT1RWbUxXSmlNR010T1RFeFlqWTNabUl3TWpGayJ9";                                        // 固定隧道 Token（必须与 PORT/DOMAIN 同时具备才部署）
 
 const ARGO_PROTOCOL = process.env.ARGO_PROTOCOL || "quic";                            // http2或quic（http2=稳定+低占用；quic=响应快+占用略高）
  
